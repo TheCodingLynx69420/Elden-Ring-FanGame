@@ -1,0 +1,120 @@
+/*Adding my fav font (optional) : */
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Basic settings*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+/*Styles for overall game background stuff (you can add your own background img!)*/
+.gameCont {
+    background-image: url(assets/battlefield.avif);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+
+/*Styling the main character (Malenia)*/
+.malenia {
+    background-image: url(assets/malenia.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 166px;
+    height: 240px;
+    position: absolute;
+    bottom: 0;
+}
+
+/*styling Radahn (its png is square so make sure to always give equal dimensions)*/
+.radahn {
+    background-image: url(assets/radahn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 147vh;
+}
+
+/*Adding animations for characters>>>>>*/
+
+/*adding animations for malenia (main character)*/
+
+.animateMalenia {
+    animation: malenia 0.6s linear;
+}
+
+@keyframes malenia {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 500px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+
+
+}
+
+/*adding animations for radahn (character at the right side)*/
+
+.animateRadahn {
+    animation: radahn 4s linear infinite;
+}
+
+@keyframes radahn {
+    0% {
+        left: 105vw;
+    }
+
+    100% {
+        left: -20vh;
+    }
+}
+
+/*Game over (visiblity is hidden by default it will only appear if you lose, (visibility would be visible dynamically using JS)*/
+
+.gameOver {
+    visibility: hidden;
+    position: relative;
+    top: 150px;
+    text-align: center;
+    font-size: 150px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(89, 14, 14);
+}
+
+/*End message*/
+
+.endmess{
+    visibility: hidden;
+    text-align: center;
+    font-size: large;
+    position: relative;
+    top: 200px;
+    background-color: rgb(42, 37, 30);
+    color: white;
+    
+}
+
+/*Score container styles*/
+
+#scoreCont {
+    font-size: xx-large;
+    color: rgb(255, 135, 54);
+    border: 5px solid rgb(147, 63, 24);
+    width: 250px;
+    text-align: center;
+    position: relative;
+
+}
+
