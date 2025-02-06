@@ -118,3 +118,12 @@
 
 }
 
+/*Music player*/
+
+.musicCntrl{
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    color: white;
+}
+/*-----------------End----------------------*/
