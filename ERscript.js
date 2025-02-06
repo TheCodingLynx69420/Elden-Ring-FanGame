@@ -13,11 +13,18 @@ let dodge = true;
 let audio = new Audio('assets/Radahn.mp3');
 audio.load();  //this will load the music file as soon as someone visits the web game;
 
-// Plays the audio when the user interacts with the game; 
-document.addEventListener('keyup', function () {
+// Plays the audio when the user clicks on the game; 
+document.addEventListener('click', function () {
     audio.play();
     audio.loop = true;  //loops the background music;
 });
+
+// Stops the music when the user double clicks in the game;
+
+document.addEventListener('dblclick', function (){
+    audio.pause();
+    audio.loop = false; // un-loops the background music;
+})
 
 
 //making a function for controlling the main character;
